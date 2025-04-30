@@ -1,4 +1,3 @@
-
 with open('input.txt', 'r') as f:
     numbers = list(map(int, f.read().split()))
 
@@ -11,4 +10,3 @@ for num in numbers:
 
 with open('output.txt', 'w') as f:
     f.write(str(product))
-    

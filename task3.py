@@ -3,8 +3,7 @@ children = []
 with open('children.txt', 'r') as f:
     for line in f:
         parts = line.strip().split()
-        if len(parts) != 3:
-            continue
+
         surname, name, age = parts
         children.append((surname, name, int(age)))
 
