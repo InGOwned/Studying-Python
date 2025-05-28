@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.stats import multivariate_normal
 
 # Задача 1
 matrix_text = \
@@ -67,13 +66,6 @@ def log_pdf(X, m, C):
     exponent = -0.5 * np.sum(diff @ inv * diff, axis=1)
     log_term = -0.5 * D * np.log(2 * np.pi) - 0.5 * np.log(det)
     return log_term + exponent
-
-# Сравнение с scipy (пример)
-m = np.array([0, 0])
-C = np.array([[1, 0.5], [0.5, 1]])
-X_sample = np.random.multivariate_normal(m, C, 10)
-log_pdf_custom = log_pdf(X_sample, m, C)
-log_pdf_scipy = multivariate_normal(m, C).logpdf(X_sample)
 
 # Задача 6
 a = np.arange(16).reshape(4,4)
