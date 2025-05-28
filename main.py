@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from scipy.special import eval_legendre
 from matplotlib.animation import FuncAnimation, PillowWriter
@@ -81,6 +82,7 @@ ax3.set_title('Результат сложения волн')
 ax1.set_ylim(-2.5, 2.5)
 ax2.set_ylim(-2.5, 2.5)
 ax3.set_ylim(-3.5, 3.5)
+
 
 plt.tight_layout()
 plt.savefig('wave_addition.png', dpi=100)
